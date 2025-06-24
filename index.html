@@ -3,50 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Eiger Adventure Products</title>
+  <title>Kang Ruli | Eiger Adventure Products</title>
+  <!-- CSS Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    .product-card img { height: 200px; object-fit: cover; border-radius: 0.5rem; }
-    .product-card:hover { transform: translateY(-3px); transition: all 0.3s ease; }
+    body { background: #f8f9fa; }
+    .product-card { border: none; border-radius: 0.5rem; box-shadow: 0 0 15px rgba(0,0,0,0.08); transition: transform 0.3s; }
+    .product-card:hover { transform: translateY(-3px); }
+    .product-card img { height: 200px; object-fit: cover; border-top-left-radius: 0.5rem; border-top-right-radius: 0.5rem; }
+    .loading-spinner { min-height: 100px; display: flex; align-items: center; justify-content: center; }
   </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
   <div class="container">
     <a class="navbar-brand fw-bold" href="#">Eiger Adventure</a>
-    <div>
-      <a class="nav-link d-inline" href="#rekomendasi">Rekomendasi</a>
-      <a class="nav-link d-inline" href="#koleksi">Koleksi</a>
-      <a class="nav-link d-inline" href="#about">About</a>
-      <a class="nav-link d-inline" href="#contact">Contact</a>
+    <div class="navbar-nav">
+      <a class="nav-link" href="#rekomendasi">Rekomendasi</a>
+      <a class="nav-link" href="#koleksi">Koleksi</a>
+      <a class="nav-link" href="#about">About</a>
+      <a class="nav-link" href="#contact">Contact</a>
     </div>
   </div>
 </nav>
 
+<!-- CONTAINER -->
 <div class="container mt-5">
+  <!-- Rekomendasi -->
   <h1 class="text-center fw-bold mb-4">REKOMENDASI PRODUK UNTUKMU</h1>
-  <div id="rekomendasi" class="row g-4"></div>
+  <div id="rekomendasi" class="row g-4">
+    <div class="loading-spinner text-center w-100"><div class="spinner-border text-primary"></div></div>
+  </div>
 
+  <!-- Koleksi Terbaru -->
   <h1 class="text-center fw-bold my-4">KOLEKSI TERBARU</h1>
-  <div id="koleksi" class="row g-4"></div>
+  <div id="koleksi" class="row g-4">
+    <div class="loading-spinner text-center w-100"><div class="spinner-border text-primary"></div></div>
+  </div>
 
+  <!-- Lihat Semua Produk -->
   <div class="text-center mt-4">
-    <a href="#products" class="btn btn-primary">Lihat Semua Produk</a>
+    <a href="#products" class="btn btn-primary btn-lg">Lihat Semua Produk</a>
   </div>
 </div>
 
+<!-- About -->
 <section id="about" class="container my-5">
   <h2 class="fw-bold">About Eiger Adventure</h2>
   <p>Eiger Adventure provides top-quality outdoor gear for explorers. We design products for performance, comfort, and resilience in every adventure.</p>
 </section>
 
+<!-- Contact -->
 <section id="contact" class="container my-5">
   <h2 class="fw-bold">Contact Us</h2>
   <p>Email: support@eigeradventure.com | Phone: (021) 123-4567</p>
 </section>
 
+<!-- Footer -->
+<footer class="bg-dark text-white py-4 mt-5">
+  <div class="container text-center">
+    &copy; 2025 Kang Ruli. All rights reserved.
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
