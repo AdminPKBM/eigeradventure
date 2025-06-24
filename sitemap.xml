@@ -1,4 +1,50 @@
-User-agent: *
-Allow: /
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Halaman Utama -->
+  <url>
+    <loc>https://eigeradventure.kangruli.web.id/</loc>
+    <lastmod>2025-06-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
 
-Sitemap: https://eigeradventure.kangruli.web.id/sitemap.xml
+  <!-- Bagian Rekomendasi -->
+  <url>
+    <loc>https://eigeradventure.kangruli.web.id/#rekomendasi</loc>
+    <lastmod>2025-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Bagian Koleksi -->
+  <url>
+    <loc>https://eigeradventure.kangruli.web.id/#koleksi</loc>
+    <lastmod>2025-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Semua Produk -->
+  <url>
+    <loc>https://eigeradventure.kangruli.web.id/#products</loc>
+    <lastmod>2025-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://eigeradventure.kangruli.web.id/#about</loc>
+    <lastmod>2025-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://eigeradventure.kangruli.web.id/#contact</loc>
+    <lastmod>2025-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>
