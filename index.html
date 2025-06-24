@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Eiger Adventure - Products</title>
+<style>
+  body { font-family: Arial,sans-serif; padding:20px; background:#f9f9f9; }
+  h1 { color: #333; }
+  .product { border:1px solid #ddd; padding:10px; margin:10px; border-radius:8px; background:#fff; }
+  .product img { max-width:200px; display:block; margin-bottom:10px; }
+</style>
+</head>
+<body>
+<h1>Eiger Adventure Products</h1>
+<div id="products"></div>
+
+<script>
+fetch('products.csv')
+  .then(res => res.text())
+  .then(text => {
+    const rows = text.trim().split('\n').slice(1); // skip header
+    const container = document.getElementById('products');
+
+    rows.forEach(row => {
+      const cols = row.split(',');
+      const product = document.createElement('div');
+      product.classList.add('product');
+
+      product.innerHTML = `
+        <h2>${cols[1]}</h2>
+        <img src="${cols[2]}" alt="${cols[1]}" />
+        <p>${cols[7]} (Diskon: ${cols[8]})</p>
+        <a href="${decodeURIComponent(cols[4])}" target="_blank">Lihat di Web</a>
+      `;
+      container.appendChild(product);
+    });
+  })
+  .catch(err => console.error(err));
+</script>
+</body>
+</html>
